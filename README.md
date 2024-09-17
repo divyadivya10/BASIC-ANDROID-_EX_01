@@ -10,7 +10,6 @@ To create Hello world Activity using all lifecycles methods to display messages 
 
 Android Studio(Min. required Artic Fox)
 
-
 ## ALGORITHM:
 
 Step 1: Open Android Stdio and then click on File -> New -> New project.
@@ -33,23 +32,107 @@ Step 7: Save and run the application.
  ```
 /*
 Program to implement a Hello world Activity using all lifecycles methods using Android Studio .
-Developed by: 
-RegisterNumber:  
+Developed by: Divya R
+RegisterNumber: 212222040040
 */
 ```
 
 ## MainActivity.java:
 
+```
+package com.example.exp1;
 
+import android.os.Bundle;
+import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        Toast toast= Toast.makeText(getApplicationContext(),"OnCreated Executed",Toast.LENGTH_LONG);
+        toast.show();
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+
+    protected void onStart(){
+        super.onStart();
+        Toast toast= Toast.makeText(getApplicationContext(),"OnStart Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onResume(){
+        super.onResume();
+        Toast toast= Toast.makeText(getApplicationContext(),"OnResume Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onPause(){
+        super.onPause();
+        Toast toast= Toast.makeText(getApplicationContext(),"onPause Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onStop(){
+        super.onStop();
+        Toast toast= Toast.makeText(getApplicationContext(),"onStop Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onRestart(){
+        super.onRestart();
+        Toast toast= Toast.makeText(getApplicationContext(),"onRestart Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        Toast toast= Toast.makeText(getApplicationContext(),"onDestroy Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+}
+```
 
 ## activitymain.xml:
 
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Andriod LifeCycle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+```
 
 ## OUTPUT:
 
+![mad ex1 op](https://github.com/user-attachments/assets/12cfe019-a2f0-4b8a-a79e-5c64e508c2c7)
 
 
 ## RESULT:
