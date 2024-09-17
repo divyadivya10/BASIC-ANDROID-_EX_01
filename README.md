@@ -1,6 +1,7 @@
 # BASIC-ANDROID-_EX_01
 # Implementation of a Hello world Activity using all lifecycles methods using Android Studio:
 Developed by: Divya R
+
 RegisterNumber: 212222040040
 ## AIM:
 To create Hello world Activity using all lifecycles methods to display messages using android studio.
