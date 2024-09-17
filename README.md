@@ -1,7 +1,7 @@
 # BASIC-ANDROID-_EX_01
 # Implementation of a Hello world Activity using all lifecycles methods using Android Studio:
-Developed by: Mena Rossini R
-RegisterNumber: 212222040099
+Developed by: Divya R
+RegisterNumber: 212222040040
 ## AIM:
 To create Hello world Activity using all lifecycles methods to display messages using android studio.
 
@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## OUTPUT:
 
+![mad ex1 op](https://github.com/user-attachments/assets/12f28318-5a64-4ef7-aa13-ecdf6be337ee)
 
 
 ## RESULT:
