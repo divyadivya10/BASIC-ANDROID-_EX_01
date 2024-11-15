@@ -3,6 +3,8 @@
 Developed by: Divya R
 
 RegisterNumber: 212222040040
+
+Date:12/8/24
 ## AIM:
 To create Hello world Activity using all lifecycles methods to display messages using android studio.
 
